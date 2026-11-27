@@ -156,11 +156,32 @@
   paint();
   sync();
 
+  /* ---- career timeline: filter chips, and cards that arrive as they scroll into view (brand.css hides them only while motion is on) ---- */
+  const timeline = document.querySelector('.timeline');
+  if (timeline) {
+    const items = [...timeline.querySelectorAll('.tl > li')];
+    const filters = timeline.querySelector('.filters');
+    const buttons = [...filters.querySelectorAll('button')];
+    filters.hidden = false;
+    buttons.forEach((b) => b.addEventListener('click', () => {
+      buttons.forEach((o) => o.setAttribute('aria-pressed', String(o === b)));
+      items.forEach((li) => { li.hidden = !!b.dataset.kind && li.dataset.kind !== b.dataset.kind; });
+    }));
+    if ('IntersectionObserver' in window) {
+      const watcher = new IntersectionObserver((seen) => seen.forEach((s) => {
+        if (!s.isIntersecting) return;
+        s.target.classList.add('seen'); watcher.unobserve(s.target);
+      }), { threshold: 0.1 });
+      items.forEach((li) => watcher.observe(li));
+      timeline.querySelector('.tl').classList.add('reveal');
+    }
+  }
+
   /* ---- views: hash routes, a dissolve between them. An article page has no views and stops here. ---- */
   const views = [...document.querySelectorAll('.view')];
   if (!views.length) return;
   const tabs = [...document.querySelectorAll('.tabs a')];
-  const find = (hash) => views.find((v) => '#' + v.id === hash);
+  const find = (hash) => views.find((v) => '#' + v.id === (hash === '#posts' ? '#journal' : hash)); // Journal was called Posts
   const viewFor = (hash) => find(hash) || views[0];
   const dissolveMs = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--tr-out'));
   let current = viewFor(location.hash), token = 0;
