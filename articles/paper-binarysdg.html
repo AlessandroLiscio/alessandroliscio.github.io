@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>BinarySDG: binary sensor data generation with R, arXiv</title><link rel='stylesheet' href='../site.css'><script src='../site.js' defer></script><link rel='icon' type='image/jpeg' href='../avatar.jpg'><meta property='og:image' content='https://alessandroliscio.github.io/avatar.jpg'></head>
+<body>
+<canvas id='ambient' aria-hidden='true'></canvas>
+<div class='wrap'>
+<header class='mast'><a class='mark' href='../index.html#home'>Alessandro Liscio</a><nav aria-label='Site'><ul class='tabs'><li><a href='../index.html#home'>Home</a></li><li><a href='../index.html#cv'>CV</a></li><li><a href='../index.html#journal' aria-current='true'>Journal</a></li></ul></nav></header>
+<main>
+<article class='folio'><a class='back' href='../index.html#journal'>All stories</a>
+<div class='post'><p class='label'>2019</p><h1 class='post-title'>BinarySDG: binary sensor data generation with R, arXiv</h1><p class='lead'>An arXiv paper from September 2019, with co-authors, on an R package that generates synthetic binary sensor data</p><svg class='divider' viewBox='0 0 600 40' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' aria-hidden='true'><path d='M0 20H286M314 20H600' opacity='.5'/><path d='M300 2L311 20L300 38L289 20Z' fill='currentColor' stroke='none'/><circle cx='300' cy='20' r='3' stroke='none'/></svg>
+<div class='post-body'>
+<h2>The data we did not have</h2>
+<p>BinarySDG started as a problem in my bachelor&#x27;s thesis in Information Technology at the University of Camerino, a joint thesis with a co-author. We were working on how to spot unusual behaviour in people going through rehabilitation after a spinal injury. The idea was to turn their housing into a smart home, where sensors would help describe daily routines.</p>
+<p>Many of those signals are simply on or off. The trouble was that the environmental sensors had not been installed, because of bureaucratic problems. We had no real data from them to work with.</p>
+<p>This is a wider issue with smart homes. Real data is scarce, and collecting it takes time and money: you have to design the experiment, get through the paperwork and install the hardware.</p>
+<h2>Making our own</h2>
+<p>So we built BinarySDG, a package for R that generates synthetic binary sensor data. The core idea is that what happens next depends, with some probability, on what is happening now, and that these odds change with the time of day.</p>
+<p>You can describe those odds yourself, with no dataset at all, or let the package learn them from a sample. You can also add unusual behaviour in the periods you choose, such as odd activity or something lasting much longer or shorter than normal. That gives an anomaly detection method something to look for.</p>
+<p>We described it in a paper with co-authors and put it on arXiv in September 2019.</p>
+<h2>What it could not tell us</h2>
+<p>Synthetic data let us move forward with the thesis, but it could not replace the real thing. Without real data, we could not confirm that our approach to spotting anomalies would work in practice.</p>
+</div></div></article>
+</main>
+<footer class='foot'><p class='label'>Alessandro Liscio · Modena, Emilia-Romagna, Italy</p><button class='toggle' id='motion-toggle' type='button' hidden>Embers on</button></footer>
+</div>
+</body></html>

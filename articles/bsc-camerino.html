@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang='en'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Bachelor&#x27;s degree, Information Technology (109/110). Thesis: Monitoring of Behavioral Anomalies on Patients in Rehabilitation from Spinal Trauma</title><link rel='stylesheet' href='../site.css'><script src='../site.js' defer></script><link rel='icon' type='image/jpeg' href='../avatar.jpg'><meta property='og:image' content='https://alessandroliscio.github.io/avatar.jpg'></head>
+<body>
+<canvas id='ambient' aria-hidden='true'></canvas>
+<div class='wrap'>
+<header class='mast'><a class='mark' href='../index.html#home'>Alessandro Liscio</a><nav aria-label='Site'><ul class='tabs'><li><a href='../index.html#home'>Home</a></li><li><a href='../index.html#cv'>CV</a></li><li><a href='../index.html#journal' aria-current='true'>Journal</a></li></ul></nav></header>
+<main>
+<article class='folio'><a class='back' href='../index.html#journal'>All stories</a>
+<div class='post'><p class='label'>2019</p><h1 class='post-title'>Bachelor&#x27;s degree, Information Technology (109/110). Thesis: Monitoring of Behavioral Anomalies on Patients in Rehabilitation from Spinal Trauma</h1><p class='lead'>BSc in Information Technology, University of Camerino, 2016 to 2019, 109/110, with a co-written thesis on smart-home sensing in spinal rehabilitation</p><svg class='divider' viewBox='0 0 600 40' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' aria-hidden='true'><path d='M0 20H286M314 20H600' opacity='.5'/><path d='M300 2L311 20L300 38L289 20Z' fill='currentColor' stroke='none'/><circle cx='300' cy='20' r='3' stroke='none'/></svg>
+<div class='post-body'>
+<p>I studied Information Technology at the University of Camerino from September 2016 to October 2019, and graduated with 109/110. I wrote my thesis with a fellow student: Monitoring of Behavioral Anomalies on Patients in Rehabilitation from Spinal Trauma.</p>
+<h2>The idea</h2>
+<p>The aim was to improve daily life for people who had lost lower-body function after a spinal trauma, with depression in these patients as the motivation. We looked at turning rehabilitation housing into a smart home. Sensors around the home and a smartband would build a picture of a person&#x27;s usual behavior, so that unusual changes could be spotted.</p>
+<p>We also built Stay Healthy, a web app connecting doctors and patients. It read data from a smartband and showed it in charts, and it offered health questionnaires and messaging. The band&#x27;s interface was poorly documented, so we had to study its Bluetooth traffic to work with it.</p>
+<h2>No sensors, so we made the data</h2>
+<p>The sensors for the home had not been installed because of bureaucratic problems, so we had no real data from them. We worked with synthetic data instead. Out of that came BinarySDG, a package that generates data resembling on/off sensor signals and can add unusual behavior to it. We also described it in a 2019 arXiv paper with our co-authors.</p>
+<h2>What we could conclude</h2>
+<p>We tried an approach that learns from each sensor&#x27;s data without labeled examples, and compared it with one that learns from labels. On our synthetic test data, the first gave fairly mediocre results and the comparison did better. We still saw it as the more practical option for a real setting, although it ignores the order of activities. Without real data, we could not confirm how well it would work.</p>
+</div></div></article>
+</main>
+<footer class='foot'><p class='label'>Alessandro Liscio · Modena, Emilia-Romagna, Italy</p><button class='toggle' id='motion-toggle' type='button' hidden>Embers on</button></footer>
+</div>
+</body></html>
