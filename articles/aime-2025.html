@@ -8,14 +8,12 @@
 <article class='folio'><a class='back' href='../index.html#posts'>All posts</a>
 <div class='post'><p class='label'>2025</p><h1 class='post-title'>D-LARA at AIME 2025 in Pavia</h1><svg class='divider' viewBox='0 0 600 40' fill='none' stroke='currentColor' stroke-width='1.6' stroke-linecap='round' aria-hidden='true'><path d='M0 20H286M314 20H600' opacity='.5'/><path d='M300 2L311 20L300 38L289 20Z' fill='currentColor' stroke='none'/><circle cx='300' cy='20' r='3' stroke='none'/></svg>
 <div class='post-body'>
-<p>The 23rd International Conference on Artificial Intelligence in Medicine (AIME 2025) took place at the University of Pavia from 23 to 26 June 2025. On 24 June, in the 10:20 to 11:00 session, Dedalus presented D-LARA: a RAG-based AI assistant for mapping and remapping laboratory codes to the LOINC standard.</p>
-<p>D-LARA came from a collaboration between Dedalus and the Institute of Informatics and Telematics of the National Research Council (IIT-CNR), with the contribution of the scientific lead of the LOINC Italia working group. The post presented it as a step for digital innovation in healthcare and for semantic interoperability.</p>
+<p>In June 2025 I presented D-LARA at the 23rd International Conference on Artificial Intelligence in Medicine (AIME 2025), held at the University of Pavia from 23 to 26 June. The talk was on 24 June, in the 10:20 to 11:00 session.</p>
+<p>D-LARA is a RAG-based AI assistant for mapping and remapping laboratory codes to the LOINC standard. It comes from a collaboration between Dedalus and the Institute of Informatics and Telematics of the National Research Council (IIT-CNR), with the contribution of the scientific lead of the LOINC Italia working group.</p>
 <h2>The problem</h2>
-<p>Clinical labs use their own local names for tests, and each one has to be mapped to a LOINC code. Done by hand, this is slow and error-prone.</p>
-<h2>LARA, the system I built</h2>
-<p>I built LARA with CNR-IIT: a multilingual RAG assistant that suggests LOINC codes for local laboratory test names. It combines:</p>
-<ul><li>dense retrieval over LOINC</li><li>LLM query rewriting, in a two-pass retrieval</li><li>hybrid search</li><li>learned reranking</li><li>confidence bands on each suggestion</li></ul>
-<p>It runs on FastAPI, deployed on OpenShift with Helm. LARA is published and won a prize at the Como Lake Awards.</p>
+<p>Clinical labs use their own local names for tests, and each one has to be mapped to a LOINC code. Done by hand, this is slow and error-prone. An assistant that suggests LOINC codes, with experts making the final decisions, is there to help with that work.</p>
+<h2>Why it matters</h2>
+<p>Mapping supports semantic interoperability, so that a lab test means the same thing across the systems that read it. Presenting this work to a medical AI audience in Pavia was a chance to discuss how retrieval-augmented generation can help with a concrete problem in healthcare data.</p>
 </div></div></article>
 </main>
 <footer class='foot'><p class='label'>Alessandro Liscio · Modena, Emilia-Romagna, Italy</p><button class='toggle' id='motion-toggle' type='button' hidden>Embers on</button></footer>
